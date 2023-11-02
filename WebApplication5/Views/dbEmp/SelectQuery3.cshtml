@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<WebApplication5.Models.Tablemy3Tables1101661>
+
+<h2>ID查詢</h2>
+
+<form action="@Url.Action("MySelQuery3")" method="post">
+    ID:
+    <select name="ID">
+        @foreach (var m in Model)
+        {
+            <option value="@m.Id">@m.Id</option>
+        }
+    </select>
+    <br />
+    <br />
+    <input type="submit" value="查詢" class="btn btn-primary" />
+</form>

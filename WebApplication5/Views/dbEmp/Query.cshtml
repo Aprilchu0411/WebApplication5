@@ -1,0 +1,11 @@
+﻿@model WebApplication5.Models.Tablemy1Tables1101661
+@{
+    ViewBag.Title = "Query";
+}
+
+<h2>專輯歌曲查詢</h2>
+<form action="@Url.Action("MyQuery")" method="post" ;
+      @Html.LabelFor(m => m.Album) @Html.EditorFor(m => m.Album)<br />
+    <br />
+    <input type="submit"value="查詢"class="btn btn-primary" />
+    </form>

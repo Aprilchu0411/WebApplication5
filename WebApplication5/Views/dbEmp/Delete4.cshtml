@@ -1,0 +1,57 @@
+﻿@model WebApplication5.Models.Tablemy4Tables1101661
+
+@{
+    ViewBag.Title = "Delete3";
+}
+
+<h2>刪除</h2>
+
+<h3>確定要刪除這筆資料?</h3>
+<dl class="dl-horizontal">
+    <dt>@Html.DisplayNameFor(m => m.Id)</dt>
+    <dd>@Html.DisplayFor(m => m.Id)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Password)</dt>
+    <dd>@Html.DisplayFor(m => m.Password)</dd>
+</dl>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("返回會員資料", "Index4")
+
+    </div>
+}
+@section topCSS{
+    <style>
+        .dl-horizontal {
+            background-color: lightpink !important;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        dt {
+            background-color: black !important;
+            border-width: 1px !important;
+            border-style: solid;
+            padding-right: 15px !important;
+            color: white;
+        }
+
+        dd {
+            border-bottom-width: 2px !important;
+            border-color: gray !important;
+            border-bottom: dashed;
+            padding-left: 20px;
+        }
+
+        .dl-horizontal > dt, .dl-horizontal > dd {
+            border-radius: 3px 3px 3px 3px !important;
+            font-size: larger;
+            line-height: 25px !important;
+            vertical-align: central;
+            padding: 3px;
+        }
+    </style>
+}

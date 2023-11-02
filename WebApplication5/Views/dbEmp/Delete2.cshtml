@@ -1,0 +1,65 @@
+﻿@model WebApplication5.Models.Tablemy2Tables1101661
+
+@{
+    ViewBag.Title = "Delete2";
+}
+
+<h2>刪除</h2>
+
+<h3>確定要刪除這筆資料?</h3>
+<dl class="dl-horizontal">
+    <dt>@Html.DisplayNameFor(m => m.Id)</dt>
+    <dd>@Html.DisplayFor(m => m.Id)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Song)</dt>
+    <dd>@Html.DisplayFor(m => m.Song)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Singer)</dt>
+    <dd>@Html.DisplayFor(m => m.Singer)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Album)</dt>
+    <dd>@Html.DisplayFor(m => m.Album)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Clickthroughrate)</dt>
+    <dd>@Html.DisplayFor(m => m.Clickthroughrate)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Time)</dt>
+    <dd>@Html.DisplayFor(m => m.Time)</dd>
+</dl>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        @Html.ActionLink("返回歌曲列表", "Index2")
+
+    </div>
+}
+@section topCSS{
+    <style>
+        .dl-horizontal {
+            background-color: lightpink !important;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        dt {
+            background-color: black !important;
+            border-width: 1px !important;
+            border-style: solid;
+            padding-right: 15px !important;
+            color: white;
+        }
+
+        dd {
+            border-bottom-width: 2px !important;
+            border-color: gray !important;
+            border-bottom: dashed;
+            padding-left: 20px;
+        }
+
+        .dl-horizontal > dt, .dl-horizontal > dd {
+            border-radius: 3px 3px 3px 3px !important;
+            font-size: larger;
+            line-height: 25px !important;
+            vertical-align: central;
+            padding: 3px;
+        }
+    </style>
+}

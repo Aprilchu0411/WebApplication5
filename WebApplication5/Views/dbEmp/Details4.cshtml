@@ -1,0 +1,47 @@
+﻿@model WebApplication5.Models.Tablemy4Tables1101661
+
+<h2>歌曲資料明細</h2>
+<dl class="dl-horizontal">
+    <dt>@Html.DisplayNameFor(m => m.Id)</dt>
+    <dd>@Html.DisplayFor(m => m.Id)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Password)</dt>
+    <dd>@Html.DisplayFor(m => m.Password)</dd>
+</dl>
+<p>
+    @Html.ActionLink("返回會員資料", "Index4", null, new { @class = "btn btn-warning" })
+
+</p>
+
+
+@section topCSS{
+    <style>
+        .dl-horizontal {
+            background-color: lightpink !important;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        dt {
+            background-color: black !important;
+            border-width: 1px !important;
+            border-style: solid;
+            padding-right: 15px !important;
+            color: white;
+        }
+
+        dd {
+            border-bottom-width: 2px !important;
+            border-color: gray !important;
+            border-bottom: dashed;
+            padding-left: 20px;
+        }
+
+        .dl-horizontal > dt, .dl-horizontal > dd {
+            border-radius: 3px 3px 3px 3px !important;
+            font-size: larger;
+            line-height: 25px !important;
+            vertical-align: central;
+            padding: 3px;
+        }
+    </style>
+}

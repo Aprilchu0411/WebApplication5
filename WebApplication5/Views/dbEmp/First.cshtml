@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication5.Models.Card>
+@{
+    ViewBag.Title = "First";
+}
+<div class="jumbotron">
+    <h2>Music Box</h2>
+</div>
+<div class="row">
+    @foreach (var man in Model)
+    {
+        @Html.Partial("_CardPartial", man);
+    }
+</div>
+
+@section topCSS {
+    <style>
+        .card img {
+            width: 100%;
+        }
+
+        .jumbotron {
+            text-align: center;
+        }
+
+        .card {
+            border: 1px solid white;
+            margin-bottom: 30px;
+        }
+
+
+
+        .card, .headshot {
+            overflow: hidden;
+        }
+
+        .card-block {
+            border-top: 1px solid white;
+            background-color: lightpink;
+            padding: 10px;
+        }
+
+        .card-title {
+            color: white;
+            background-color: black;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+}

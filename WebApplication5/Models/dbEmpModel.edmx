@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbEmpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tablemy1Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Song" Type="nvarchar" MaxLength="30" />
+          <Property Name="Singer" Type="nvarchar" MaxLength="20" />
+          <Property Name="Album" Type="nvarchar" MaxLength="20" />
+          <Property Name="Clickthroughrate" Type="nvarchar" MaxLength="30" />
+          <Property Name="Time" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Tablemy2Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Song" Type="nvarchar" MaxLength="20" />
+          <Property Name="Singer" Type="nvarchar" MaxLength="20" />
+          <Property Name="Album" Type="nvarchar" MaxLength="20" />
+          <Property Name="Clickthroughrate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Time" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Tablemy3Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Song" Type="nvarchar" MaxLength="30" />
+          <Property Name="Singer" Type="nvarchar" MaxLength="20" />
+          <Property Name="Album" Type="nvarchar" MaxLength="20" />
+          <Property Name="Clickthroughrate" Type="nvarchar" MaxLength="50" />
+          <Property Name="Time" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 '1112netdbA.dbo.Tablemy4Tables1101661' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="Tablemy4Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="dbEmpModelStoreContainer">
+          <EntitySet Name="Tablemy1Tables1101661" EntityType="Self.Tablemy1Tables1101661" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tablemy2Tables1101661" EntityType="Self.Tablemy2Tables1101661" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tablemy3Tables1101661" EntityType="Self.Tablemy3Tables1101661" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tablemy4Tables1101661" EntityType="Self.Tablemy4Tables1101661" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tablemy4Tables1101661].[Id] AS [Id], 
+    [Tablemy4Tables1101661].[Password] AS [Password]
+    FROM [dbo].[Tablemy4Tables1101661] AS [Tablemy4Tables1101661]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbEmpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tablemy1Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Song" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Singer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Album" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Clickthroughrate" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tablemy2Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Song" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Singer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Album" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Clickthroughrate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tablemy3Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Song" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Singer" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Album" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Clickthroughrate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tablemy4Tables1101661">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="dbEmpEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tablemy1Tables1101661" EntityType="Self.Tablemy1Tables1101661" />
+          <EntitySet Name="Tablemy2Tables1101661" EntityType="Self.Tablemy2Tables1101661" />
+          <EntitySet Name="Tablemy3Tables1101661" EntityType="Self.Tablemy3Tables1101661" />
+          <EntitySet Name="Tablemy4Tables1101661" EntityType="Self.Tablemy4Tables1101661" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbEmpModelStoreContainer" CdmEntityContainer="dbEmpEntities">
+          <EntitySetMapping Name="Tablemy1Tables1101661">
+            <EntityTypeMapping TypeName="dbEmpModel.Tablemy1Tables1101661">
+              <MappingFragment StoreEntitySet="Tablemy1Tables1101661">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Song" ColumnName="Song" />
+                <ScalarProperty Name="Singer" ColumnName="Singer" />
+                <ScalarProperty Name="Album" ColumnName="Album" />
+                <ScalarProperty Name="Clickthroughrate" ColumnName="Clickthroughrate" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tablemy2Tables1101661">
+            <EntityTypeMapping TypeName="dbEmpModel.Tablemy2Tables1101661">
+              <MappingFragment StoreEntitySet="Tablemy2Tables1101661">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Song" ColumnName="Song" />
+                <ScalarProperty Name="Singer" ColumnName="Singer" />
+                <ScalarProperty Name="Album" ColumnName="Album" />
+                <ScalarProperty Name="Clickthroughrate" ColumnName="Clickthroughrate" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tablemy3Tables1101661">
+            <EntityTypeMapping TypeName="dbEmpModel.Tablemy3Tables1101661">
+              <MappingFragment StoreEntitySet="Tablemy3Tables1101661">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Song" ColumnName="Song" />
+                <ScalarProperty Name="Singer" ColumnName="Singer" />
+                <ScalarProperty Name="Album" ColumnName="Album" />
+                <ScalarProperty Name="Clickthroughrate" ColumnName="Clickthroughrate" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tablemy4Tables1101661">
+            <EntityTypeMapping TypeName="dbEmpModel.Tablemy4Tables1101661">
+              <MappingFragment StoreEntitySet="Tablemy4Tables1101661">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

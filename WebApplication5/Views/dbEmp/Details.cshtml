@@ -1,0 +1,56 @@
+﻿@model WebApplication5.Models.Tablemy1Tables1101661
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>歌曲資料明細</h2>
+<dl class="dl-horizontal">
+    <dt>@Html.DisplayNameFor(m => m.Id)</dt>
+    <dd>@Html.DisplayFor(m => m.Id)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Song)</dt>
+    <dd>@Html.DisplayFor(m => m.Song)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Singer)</dt>
+    <dd>@Html.DisplayFor(m => m.Singer)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Album)</dt>
+    <dd>@Html.DisplayFor(m => m.Album)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Clickthroughrate)</dt>
+    <dd>@Html.DisplayFor(m => m.Clickthroughrate)</dd>
+    <dt>@Html.DisplayNameFor(m => m.Time)</dt>
+    <dd>@Html.DisplayFor(m => m.Time)</dd>
+</dl>
+<p>
+    @Html.ActionLink("編輯", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("返回歌曲列表", "Index5", null, new { @class = "btn btn-warning" })
+</p>
+@section topCSS{
+    <style>
+        .dl-horizontal {
+            background-color: lightpink !important;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        dt {
+            background-color: black !important;
+            border-width: 1px !important;
+            border-style: solid;
+            padding-right: 15px !important;
+            color: white;
+        }
+
+        dd {
+            border-bottom-width: 2px !important;
+            border-color: gray !important;
+            border-bottom: dashed;
+            padding-left: 20px;
+        }
+
+        .dl-horizontal > dt, .dl-horizontal > dd {
+            border-radius: 3px 3px 3px 3px !important;
+            font-size: larger;
+            line-height: 25px !important;
+            vertical-align: central;
+            padding: 3px;
+        }
+    </style>
+}
